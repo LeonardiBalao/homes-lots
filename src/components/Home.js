@@ -11,7 +11,7 @@ export default function Home({ home, children, onClickHandler }) {
     <div key={home.homePlanId} className="home" tabIndex={0}>
 
       <span className="home-container">
-        <div className="image-container">
+        <div className="home-image-container">
           <img src={home.image} alt="" className="home-image" ></img>
           <span className="favorite-icons"><IoHeartCircleOutline onClick={onClickHandler}></IoHeartCircleOutline></span>
         </div>

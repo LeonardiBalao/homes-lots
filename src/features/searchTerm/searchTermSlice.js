@@ -5,10 +5,10 @@ export const searchTermSlice = createSlice({
   initialState: '',
   reducers: {
     setSearchTerm: (state, action) => {
-      state += action.payload
+      return action.payload;
     },
     clearSearchTerm: (state, action) => {
-      state = "";
+      return "";
     },
   },
 });

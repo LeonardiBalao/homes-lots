@@ -1,10 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaSearch } from "react-icons/fa";
+import { MdClear } from "react-icons/md";
 import { setSearchTerm, clearSearchTerm, selectSearchTerm } from './searchTermSlice.js';
-
-const clearIconUrl = '../../assets/icons/clear.svg';
-
 
 export const SearchTerm = () => {
   const searchTerm = useSelector(selectSearchTerm);
@@ -29,15 +27,7 @@ export const SearchTerm = () => {
         onChange={onSearchTermChangeHandler}
         placeholder="Search"
       />
-      {searchTerm.length > 0 && (
-        <button
-          onClick={onClearSearchTermHandler}
-          type="button"
-          id="search-clear-button"
-        >
-          <img src={clearIconUrl} alt="" />
-        </button>
-      )}
+      {searchTerm.length > 0 && (<MdClear onClick={onClearSearchTermHandler} id="search-clear-button" />)}
     </div>
   );
 };
